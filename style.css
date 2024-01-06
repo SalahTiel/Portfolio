@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+main{
+    width: 500vw;
+    height: 100vh;
+    display:flex;
+    overflow: hidden;
+}
+main section{
+    width: 100vw;
+    background-color: aquamarine;
+}
+main section:nth-child(even){
+    background-color: bisque;
+}
+
+header{
+    width: 100vw;
+    position: fixed; 
+    bottom: 0;
+    border-bottom: 2rem solid black
+}
+header ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
