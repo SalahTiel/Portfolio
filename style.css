@@ -1,25 +1,50 @@
+/* reset and variables*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+html, body{
     scroll-behavior: smooth;
+    overflow-Y: hidden;
 }
-body{
-    overflow: hidden;
-}
+
 a{
     text-decoration: none;
 }
 ::-webkit-scrollbar{
     display: none;
 }
-main{
+
+/* header */
+.l-header{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    overflow-x: auto;
+    border-bottom: 2rem solid black;
+}
+.header__list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+.header__list__item{
+    padding: 2rem;
+}
+.header__list__item--selected{
+    background-color: black;
+}
+.header__list__link{
+    color: red;
+}
+
+.l-main{
     width: 500vw;
     height: 100vh;
-    display:flex;
-    overflow: hidden;
+    display:flex
 }
 main section{
     width: 100vw;
@@ -29,16 +54,4 @@ main section:nth-child(even){
     background-color: bisque;
 }
 
-header{
-    width: 100vw;
-    position: fixed; 
-    bottom: 0;
-    border-bottom: 2rem solid black
-}
-header ul {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    list-style: none;
-}
+

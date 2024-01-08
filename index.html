@@ -8,19 +8,29 @@
 </head>
 <body>
 
-    <header>
+    <header class="l-header">
         <nav>
-            <ul>
-                <li><a id="nav-1" onclick="changeNavigation(1)" href="#home">Home</a></li>
-                <li><a id="nav-2" onclick="changeNavigation(2)" href="#about">About me</a></li>
-                <li><a id="nav-3" onclick="changeNavigation(3)" href="#projects">My Projects</a></li>
-                <li><a id="nav-4" onclick="changeNavigation(4)" href="#contact">Contact</a></li>
-                <li><a id="nav-5" onclick="changeNavigation(5)" href="#playground">Playground</a></li>
+            <ul class="header__list">
+                <li id="itemList-1" class="header__list__item">
+                    <a id="nav-1" class="header__list__link" onclick="changeNavigation(1)" href="#home">Home</a>
+                </li>
+                <li id="itemList-2" class="header__list__item">
+                    <a id="nav-2" class="header__list__link" onclick="changeNavigation(2)" href="#about">About me</a>
+                </li>
+                <li id="itemList-3" class="header__list__item">
+                    <a id="nav-3" class="header__list__link" onclick="changeNavigation(3)" href="#projects">My Projects</a>
+                </li>
+                <li id="itemList-4" class="header__list__item">
+                    <a id="nav-4" class="header__list__link" onclick="changeNavigation(4)" href="#contact">Contact</a>
+                </li>
+                <li id="itemList-5" class="header__list__item">
+                    <a id="nav-5" class="header__list__link" onclick="changeNavigation(5)" href="#playground">Playground</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="l-main">
         <section id="home"> <h1>HOME</h1></section>
         <section id="about"> <h2>ABOUT ME</h2></section>
         <section id="projects"> <h2>MEET MY PROJECTS</h3></section>
