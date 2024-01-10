@@ -1,11 +1,18 @@
+document.getElementById('nav-1').click()
 // adds horizontal scrolling with fixed positions
 let index = 0
 function changeNavigation(newIndex) {
+    openMobileMenu()
     setTimeout(()=>{
-        
         index = newIndex
     },500)
 }
+function clickOnSon(reference){
+    document.getElementById('nav-' + reference).click()
+    document.getElementsByClassName('l-header')[0].classList.remove('l-header--opened')
+document.getElementsByClassName('header__list')[0].classList.remove('header__list--opened')
+}
+
 
 //change the background color of the current section
 function currentSection(){
@@ -101,5 +108,26 @@ document.addEventListener('wheel', (event)=> {
     }
 })
 
-//updates screen size when changed
+//mobile menu
+document.getElementsByClassName('l-header')[0].classList.remove('l-header--opened')
+document.getElementsByClassName('header__list')[0].classList.remove('header__list--opened')
 
+function openMobileMenu(){
+    document.getElementsByClassName('l-header')[0].classList.toggle('l-header--opened')
+    document.getElementsByClassName('header__list')[0].classList.toggle('header__list--opened')
+}
+
+function switchTheme(theme){
+    
+    if( theme == 'light'){
+        document.getElementById('icon-sun').src = 'assets/icon-sun-select.png'
+        document.getElementById('icon-moon').src = 'assets/icon-moon-light.png'
+        document.querySelector('html').classList.remove('dark')
+        
+    }
+    else{
+        document.getElementById('icon-sun').src = 'assets/icon-sun-dark.png'
+        document.getElementById('icon-moon').src = 'assets/icon-moon-select.png'
+        document.querySelector('html').classList.add('dark')
+    }
+}

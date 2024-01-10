@@ -4,26 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Salah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <title>Salah | Portfolio</title>
 </head>
 <body>
+
+    <!--background animation-->
+    <div class="bg-animation">
+        <span class="bg-animation__box" style="--time : 39 "></span>
+        <span class="bg-animation__box" style="--time : 41 "></span>
+        <span class="bg-animation__box" style="--time : 20"></span>
+        <span class="bg-animation__box" style="--time : 35"></span>
+        <span class="bg-animation__box" style="--time : 45 "></span>
+        <span class="bg-animation__box" style="--time : 27"></span>
+        <span class="bg-animation__box" style="--time : 37 "></span>
+        <span class="bg-animation__box" style="--time : 28 "></span>
+        <span class="bg-animation__box" style="--time : 42 "></span>
+        <span class="bg-animation__box" style="--time : 25"></span>
+        <span class="bg-animation__box" style="--time : 31"></span>
+    </div>
 
     <header class="l-header">
         <nav>
             <ul class="header__list">
-                <li id="itemList-1" class="header__list__item">
+                <li onclick="openMobileMenu()" class="header__list__mobile-menu">
+                        <span class="mobile-menu__stick"></span>
+                </li>
+                <li onclick="clickOnSon(1)" id="itemList-1" class="header__list__item">
                     <a id="nav-1" class="header__list__link" onclick="changeNavigation(1)" href="#home">Home</a>
                 </li>
-                <li id="itemList-2" class="header__list__item">
+                <li onclick="clickOnSon(2)" id="itemList-2" class="header__list__item">
                     <a id="nav-2" class="header__list__link" onclick="changeNavigation(2)" href="#about">About me</a>
                 </li>
-                <li id="itemList-3" class="header__list__item">
+                <li onclick="clickOnSon(3)" id="itemList-3" class="header__list__item">
                     <a id="nav-3" class="header__list__link" onclick="changeNavigation(3)" href="#projects">My Projects</a>
                 </li>
-                <li id="itemList-4" class="header__list__item">
+                <li onclick="clickOnSon(4)" id="itemList-4" class="header__list__item">
                     <a id="nav-4" class="header__list__link" onclick="changeNavigation(4)" href="#contact">Contact</a>
                 </li>
-                <li id="itemList-5" class="header__list__item">
+                <li onclick="clickOnSon(5)" id="itemList-5" class="header__list__item">
                     <a id="nav-5" class="header__list__link" onclick="changeNavigation(5)" href="#playground">Playground</a>
                 </li>
             </ul>
@@ -31,11 +53,44 @@
     </header>
 
     <main class="l-main">
-        <section id="home"> <h1>HOME</h1></section>
-        <section id="about"> <h2>ABOUT ME</h2></section>
-        <section id="projects"> <h2>MEET MY PROJECTS</h3></section>
-        <section id="contact"> <h2>CONTACT ME</h2></section>
-        <section id="playground"><h2>Enjoy a little game</h2></section>
+        <section id="home" class="l-section home">
+            <div class="home__header">
+                <div class="home__header__theme">
+                    <input onclick="switchTheme('light')" id="light" type="radio" name="theme" checked>
+                    <label class="theme__label" for="light">
+                        <img id="icon-sun" class="theme__label__icon" src="assets/icon-sun-select.png" alt="sun icon">
+                    </label>
+                    <input onclick="switchTheme('dark')" id="dark" type="radio" name="theme">
+                    <label class="theme__label" for="dark">
+                        <img id="icon-moon" class="theme__label__icon" src="assets/icon-moon-light.png" alt="moon icon">
+                    </label>
+                </div>
+            </div>
+            <div class="home__content">
+                <div class="home__content__texts">
+                    <div class="content__texts__text">
+                        <h1 class="texts__text__title">Olá! Eu sou o Salah</h1>
+                        <h3 class="texts__text__subtitle">&lt;/front-end developer &gt;</h3>
+                    </div>
+                    <div class="content__texts__buttons">
+                        <button class="texts__buttons__button">
+                            <img class="buttons__button__icon" src="assets/icon-GitHub.svg" alt="">
+                            <a class="buttons__button__link" href="">GitHub</a>
+                        </button>
+                        <button class="texts__buttons__button">
+                            <img class="buttons__button__icon" src="assets/icon-LinkedIn.svg" alt="">
+                            <a class="buttons__button__link" href="">LinkedIn</a>
+                        </button>
+                    </div>
+                </div>
+                <img class="home__content__img" src="assets/home-img.png" alt="">
+            </div>
+        </section>
+
+        <section id="about" class="l-section"> <h2>ABOUT ME</h2></section>
+        <section id="projects" class="l-section"> <h2>MEET MY PROJECTS</h3></section>
+        <section id="contact" class="l-section"> <h2>CONTACT ME</h2></section>
+        <section id="playground" class="l-section"><h2>Enjoy a little game</h2></section>
     </main>
     
 </body>
