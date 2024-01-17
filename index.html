@@ -107,7 +107,42 @@
         </section>
 
         
-        <section id="projects" class="l-section"> <h2>MEET MY PROJECTS</h3></section>
+        <section id="projects" class="l-section projects">
+            <h2 class="projects__title">Meus Projetos</h2>
+            <div class="projects__navigation">
+                <input checked id="project-1" name="projects" type="radio" onclick="changeProject(1)" >
+                <label class="projects__navigation__label" for="project-1">
+                    <img class="navigation__label__logo" src="assets/logo-gymeasy.png" alt="">
+                    <p class="navigation__label__text">GymEasy</p>
+                </label>
+
+                <input id="project-2" name="projects" type="radio" onclick="changeProject(2)">
+                <label class="projects__navigation__label" for="project-2">
+                    <img class="navigation__label__logo" src="assets/logo-rh.png" alt="">
+                    <p class="navigation__label__text">RH Control</p>
+                </label>
+                
+                <input id="project-3" name="projects" type="radio" onclick="changeProject(3)">
+                <label class="projects__navigation__label" for="project-3">
+                    <img class="navigation__label__logo" src="assets/logo-ybox.png" alt="">
+                    <p class="navigation__label__text">YBox</p>
+                </label>
+            </div>
+            <div class="projects__content">
+                <img src="assets/mockup-gymeasy.png" alt="" class="projects__content__img">
+                <div class="projects__content__texts">
+                    <h3 class="content__texts__title">GymEasy</h3>
+                    <p class="content__texts__paragraph">GymEasy é uma aplicação web desenvolvida para que academias esportivas possam administrar o cadastro de seus alunos. (Este projeto está em fase de desenvolvimento)</p>
+                    <div class="content__texts__button-div">
+                        <button class="texts__button-div__button">
+                            <p class="button-div__button__paragraph">ir para >></p>   
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <section id="contact" class="l-section"> <h2>CONTACT ME</h2></section>
         <section id="playground" class="l-section"><h2>Enjoy a little game</h2></section>
     </main>

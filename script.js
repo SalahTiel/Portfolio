@@ -131,3 +131,30 @@ function switchTheme(theme){
         document.querySelector('html').classList.add('dark')
     }
 }
+
+//change project navigation
+function changeProject (index){
+    let mockup = document.getElementsByClassName('projects__content__img')[0]
+    let projectName = document.getElementsByClassName('content__texts__title')[0]
+    let projectDescription = document.getElementsByClassName('content__texts__paragraph')[0]
+
+    switch(index){
+        case 1:
+            mockup.src = 'assets/mockup-gymeasy.png'
+            projectName.textContent = 'GymEasy'
+            projectDescription.textContent = 'GymEasy é uma aplicação web desenvolvida para que academias esportivas possam administrar o cadastro de seus alunos. (Este projeto está em fase de desenvolvimento)'
+            break
+
+        case 2:
+            mockup.src = 'assets/mockup-rh.png'
+            projectName.textContent = 'RH Control'
+            projectDescription.textContent = 'RH Control é uma aplicação web desenvolvida para auxiliar o controle de Recursos Humanos dentro de uma empresa. (Este projeto está em fase de desenvolvimento)'
+            break
+
+        case 3:
+            mockup.src = 'assets/mockup-ybox.png'
+            projectName.textContent = 'YBox'
+            projectDescription.textContent = 'Ybox é uma aplicação web desenvolvida para auxiliar na logistica de empresas que precisam de um controle de estoque. (Este projeto está em fase de desenvolvimento)'
+            break
+    }
+}
