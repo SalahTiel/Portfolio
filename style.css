@@ -415,7 +415,91 @@ textarea.form__wrapper__input{
 }
 
 
+/*playground*/
+.playground{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    padding: 5vw 10vw;
 
+}
+.playground__texts__title{
+    font: 500 4rem 'Jost', sans-serif;
+    color: var(--title);
+}
+.playground__texts__subtitle{
+    font: 400 2rem 'Jost', sans-serif;
+    color: var(--paragraph);
+}
+.board{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+.board .card{
+    background-color: var(--secondary);
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.397);
+}
+.image{
+    height: 15rem;
+    opacity: 0;
+    border-radius: 25px;
+}
+.image--selected{
+    opacity: 1;
+}
+
+
+.img-1, .img-7{
+    background-image: url(assets/cards/card.png);
+    background-position: center center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+.img-2, .img-8{
+    background-image: url(assets/cards/card-1.png);
+    background-position: center center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+.img-3, .img-9{
+    background-image: url(assets/cards/card-2.png);
+    background-position: center center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+.img-4, .img-10{
+    background-image: url(assets/cards/card-3.png);
+    background-position: center center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+.img-5, .img-11{
+    background-image: url(assets/cards/card-4.png);
+    background-position: center center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+.img-6, .img-12{
+    background-image: url(assets/cards/card-5.png);
+    background-position: center center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+
+.image{
+    background-color: var(--primary);
+    transition: opacity 500ms;
+}
+.rightCard{
+    opacity: 1;
+    pointer-events: none;
+    background-color: #D8D8D8;
+}
 
 
 
@@ -504,6 +588,18 @@ textarea.form__wrapper__input{
         font-size: 1.5rem;
         
     }
+
+    .playground{
+        padding: 0 7vw;
+    }
+    .playground__texts__title{
+        font-size: 2.5rem;
+    }
+    .playground__texts__subtitle{
+        font-size: 1.5rem;
+    }
+
+
 }
 @media screen and (max-width: 1050px){
     .projects__navigation__label{
@@ -647,6 +743,21 @@ textarea.form__wrapper__input{
     .contact__form__button{
         padding: 0.5rem;
     }
+
+    .playground{
+        gap: 1.5rem;
+    }
+    .playground__texts{
+
+        text-align: center;
+    }
+    .board{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .image{
+        height: 10rem;
+    }
+
 }
 
 @media  screen and (max-width: 420px){
@@ -700,6 +811,18 @@ textarea.form__wrapper__input{
     .contact__texts__links{
         gap: 3rem;
     }
+
+    .playground{
+        padding: 0 5vw;
+        gap: 1rem;
+    }
+    .playground__texts__subtitle{
+        font-size: 1.2rem;
+    }
+    .image{
+        height: 8rem;
+    }
+    
 }
 
 
@@ -716,4 +839,8 @@ textarea.form__wrapper__input{
         transform-origin: 0% 100%;
     }
     
+}
+@keyframes cards{
+    0%{transform: translateX(-100px);}
+    100%{transform: translateX(0);}
 }

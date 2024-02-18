@@ -158,3 +158,68 @@ function changeProject (index){
             break
     }
 }
+
+//Memory game
+let firstCard = [0, 0]
+let counter = 1
+let cardsCombination = 0
+resetGame()
+function checkCard(index, value){
+        if(counter < 2){
+            firstCard = [index, value]
+            counter++
+            document.getElementsByClassName('img-' +index)[0].classList.add('image--selected')
+        }
+        else{
+            if(firstCard[1] == value && firstCard[0] != index ){
+                counter = 1
+                document.getElementsByClassName('img-' + firstCard[0])[0].classList.remove('image--selected')
+                document.getElementsByClassName('img-' + firstCard[0])[0].classList.add('rightCard')
+                document.getElementsByClassName('img-' + index)[0].classList.add('rightCard')
+                cardsCombination++
+                if(cardsCombination == 6){
+                    cardsCombination = 0
+                    setTimeout(()=>{
+                        resetGame()
+                    },2000)
+                }
+            }
+            else{
+                document.getElementsByClassName('img-' + index)[0].classList.add('image--selected')
+                counter = 1
+
+                document.querySelectorAll('.image').forEach((e) => {
+                    e.style.pointerEvents = 'none'
+                })
+                setTimeout(()=>{
+                    document.getElementsByClassName('img-' + firstCard[0])[0].classList.remove('image--selected')
+                    document.getElementsByClassName('img-' + index)[0].classList.remove('image--selected')
+                    document.querySelectorAll('.image').forEach((e) => {
+                        e.style.pointerEvents = 'all'
+                    })
+                },500)
+                
+            }
+        }
+}
+function resetGame (){
+    const rightCards = document.querySelectorAll('.rightCard')
+    for(let i = 0; i < rightCards.length; i++){
+        rightCards[i].classList.remove('rightCard')
+    }
+    const cards = Array.from(document.querySelectorAll('.card'))
+    const newOrder = cards.map((e) => ({card : e, order: Math.random()})).sort((a, b)=> a.order - b.order)
+    const board = document.querySelector('.board')
+    newOrder.forEach((e) => (board.appendChild(e.card)))
+}
+document.querySelectorAll('.image').forEach((e)=> {
+    e.addEventListener('click', ()=>{
+        const index = parseInt(e.getAttribute('data-index'))
+        const value = parseInt(e.getAttribute('data-value'))
+        checkCard(index, value)
+    })
+})
+
+
+
+
