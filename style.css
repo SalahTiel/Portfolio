@@ -138,7 +138,13 @@ a{
     display: block;
     margin: auto;
 }
-
+.home__mobileOrientation{
+    display: none;
+    text-align: center;
+    font: 500 1rem 'Jost', sans-serif;
+    color: var(--secondary);
+    padding-top: 2rem;
+}
 .home__content{ 
     height: 100%;
     display: flex;
@@ -417,10 +423,8 @@ textarea.form__wrapper__input{
 
 /*playground*/
 .playground{
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 5rem;
     padding: 5vw 10vw;
 
@@ -448,12 +452,12 @@ textarea.form__wrapper__input{
     height: 15rem;
     opacity: 0;
     border-radius: 25px;
+    background-color: var(--primary);
+    transition: opacity 500ms;
 }
 .image--selected{
     opacity: 1;
 }
-
-
 .img-1, .img-7{
     background-image: url(assets/cards/card.png);
     background-position: center center;
@@ -491,10 +495,6 @@ textarea.form__wrapper__input{
     background-repeat: no-repeat;
 }
 
-.image{
-    background-color: var(--primary);
-    transition: opacity 500ms;
-}
 .rightCard{
     opacity: 1;
     pointer-events: none;
@@ -590,7 +590,7 @@ textarea.form__wrapper__input{
     }
 
     .playground{
-        padding: 0 7vw;
+        padding: 5vw 7vw;
     }
     .playground__texts__title{
         font-size: 2.5rem;
@@ -656,6 +656,9 @@ textarea.form__wrapper__input{
     }
     .theme__label__icon{
         width: 1rem;
+    }
+    .home__mobileOrientation{
+        display: block;
     }
     .home__content{
         flex-direction: column;
@@ -754,8 +757,12 @@ textarea.form__wrapper__input{
     .board{
         grid-template-columns: repeat(4, 1fr);
     }
+    .board .card{
+        border-radius: 15px;
+    }
     .image{
         height: 10rem;
+        border-radius: 15px;
     }
 
 }
@@ -813,14 +820,18 @@ textarea.form__wrapper__input{
     }
 
     .playground{
-        padding: 0 5vw;
+        padding: 5vw 5vw;
         gap: 1rem;
     }
     .playground__texts__subtitle{
         font-size: 1.2rem;
     }
+    .board .card{
+        border-radius: 10px;
+    }
     .image{
-        height: 8rem;
+        height: 6rem;
+        border-radius: 10px;
     }
     
 }

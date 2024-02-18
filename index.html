@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html class="dark" lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,16 +56,17 @@
         <section id="home" class="l-section home">
             <div class="home__header">
                 <div class="home__header__theme">
-                    <input onclick="switchTheme('light')" id="light" type="radio" name="theme" checked>
+                    <input onclick="switchTheme('light')" id="light" type="radio" name="theme">
                     <label class="theme__label" for="light">
-                        <img id="icon-sun" class="theme__label__icon" src="assets/icon-sun-select.png" alt="sun icon">
+                        <img id="icon-sun" class="theme__label__icon" src="assets/icon-sun-dark.png" alt="sun icon">
                     </label>
-                    <input onclick="switchTheme('dark')" id="dark" type="radio" name="theme">
+                    <input onclick="switchTheme('dark')" id="dark" type="radio" name="theme" checked>
                     <label class="theme__label" for="dark">
-                        <img id="icon-moon" class="theme__label__icon" src="assets/icon-moon-light.png" alt="moon icon">
+                        <img id="icon-moon" class="theme__label__icon" src="assets/icon-moon-select.png" alt="moon icon">
                     </label>
                 </div>
             </div>
+            <p class="home__mobileOrientation">rolagem horizontal &#x1F449</p>
             <div class="home__content">
                 <div class="home__content__texts">
                     <div class="content__texts__text">
@@ -75,11 +76,11 @@
                     <div class="content__texts__buttons">
                         <button class="texts__buttons__button">
                             <img class="buttons__button__icon" src="assets/icon-GitHub.svg" alt="">
-                            <a class="buttons__button__link" href="">GitHub</a>
+                            <a class="buttons__button__link" href="https://github.com/SalahTiel">GitHub</a>
                         </button>
                         <button class="texts__buttons__button">
                             <img class="buttons__button__icon" src="assets/icon-LinkedIn.svg" alt="">
-                            <a class="buttons__button__link" href="">LinkedIn</a>
+                            <a class="buttons__button__link" href="https://www.linkedin.com/in/salatiel-eunat%C3%A3-28314a212/">LinkedIn</a>
                         </button>
                     </div>
                 </div>
@@ -91,7 +92,7 @@
         <section id="about" class="l-section about">
             <div class="about__texts">
                 <h2 class="about__texts__title">Sobre mim</h2>
-                <p class="about__texts__paragraph">Aqui há uma frase de impacto curta e marcante e talvez uma breve descrição ou quem sabe tudo junto</p>
+                <p class="about__texts__paragraph">Me chamo Salatiel Eunatã, ou simplesmente Salah. Sou programador Front-end e transformo a minha criatividade em linhas de código.</p>
                 <div class="about__texts__skills">
                     <h3 class="texts__skills__title">Skills</h3>
                     <div class="texts__skills__icons">
@@ -135,7 +136,7 @@
                     <p class="content__texts__paragraph">GymEasy é uma aplicação web desenvolvida para que academias esportivas possam administrar o cadastro de seus alunos. (Este projeto está em fase de desenvolvimento)</p>
                     <div class="content__texts__button-div">
                         <button class="texts__button-div__button">
-                            <p class="button-div__button__paragraph">ir para >></p>   
+                            <p class="button-div__button__paragraph">em breve >></p>   
                         </button>
                     </div>
                 </div>
@@ -152,20 +153,20 @@
                 <div class="contact__texts__links">
                     <div class="texts__links__wrapper">
                         <img class="links__wrapper__icon" src="assets/contact-email-icon.png" alt="">
-                        <a href="" class="links__wrapper__link">salatielmf19@gmail.com</a>
+                        <a href="mailto:salatielmf19@gmail.com?" class="links__wrapper__link">salatielmf19@gmail.com</a>
                     </div>
                     <div class="texts__links__wrapper">
                         <img class="links__wrapper__icon" src="assets/contact-LinkedIn-icon.png" alt="">
-                        <a href="" class="links__wrapper__link">Salatiel Eunatã</a>
+                        <a href="https://www.linkedin.com/in/salatiel-eunat%C3%A3-28314a212/" class="links__wrapper__link">Salatiel Eunatã</a>
                     </div>
                     <div class="texts__links__wrapper">
                         <img class="links__wrapper__icon" src="assets/contact-GitHub-icon.png" alt="">
-                        <a href="" class="links__wrapper__link">SalahTiel</a>
+                        <a href="https://github.com/SalahTiel" class="links__wrapper__link">SalahTiel</a>
                     </div>
                 </div>
             </div>
 
-            <form class="contact__form" action="">
+            <form class="contact__form" action="https://formsubmit.co/salatielmf19@gmail.com" method="POST">
                 <legend class="contact__form__title">Me envie um email de contato</legend>
                 <div class="contact__form__wrapper">
                     <img class="form__wrapper__icon" src="assets/contact-person-icon.png" alt="">
